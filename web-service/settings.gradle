@@ -6,4 +6,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'web-function'
+rootProject.name = 'web-service'

@@ -2,7 +2,23 @@
 
 Examples from the talk I have at jLove Conference 2021.
 
-## Serverless application with Spring Cloud Function and Spring Native
+## Serverless application with Spring Native and Spring WebFlux
+
+Prerequisites: Java 11
+
+Build the `web-service` application as a native container image:
+
+```bash
+./gradlew bootBuildImage
+```
+
+Send a GET request:
+
+```bash
+http GET :8080
+```
+
+## Serverless application with Spring Native and Spring Cloud Function
 
 Prerequisites: Java 11
 

@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.1'
+	id 'org.springframework.boot' version '2.5.2-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
@@ -9,11 +9,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '16'
 
 repositories {
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
 	mavenCentral()
 }
 
 ext {
-	set('springCloudVersion', "2020.0.3")
+	set('springCloudVersion', "2020.0.4-SNAPSHOT")
 }
 
 dependencies {
@@ -38,6 +40,10 @@ dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
+}
+
+bootBuildImage {
+	imageName = "thomasvitale/${project.name}:${project.version}"
 }
 
 test {
