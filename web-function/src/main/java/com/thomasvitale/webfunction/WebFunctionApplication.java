@@ -34,7 +34,7 @@ public class WebFunctionApplication {
 	Function<Flux<String>, Flux<String>> sentence() {
 		return flux -> flux.map(instrument -> {
 			log.info("Building sentence for skill...");
-			return "I play the " + instrument;
+			return "I can play the " + instrument;
 		});
 	}
 
@@ -50,7 +50,7 @@ public class WebFunctionApplication {
 	Function<Flux<String>, Flux<Skill>> sentenceSkill() {
 		return flux -> flux.map(instrument -> {
 			log.info("Building sentence for skill...");
-			return new Skill("I play the " + instrument);
+			return new Skill("I can play the " + instrument);
 		});
 	}
 

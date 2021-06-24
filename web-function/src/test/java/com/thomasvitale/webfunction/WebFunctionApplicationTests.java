@@ -18,7 +18,7 @@ class WebFunctionApplicationTests {
 
 	@Test
 	void testFunctionDefinitionApi() {
-		Skill expectedSkill = new Skill("I play the PIANO");
+		Skill expectedSkill = new Skill("I can play the PIANO");
 		webClient.post()
 				.bodyValue(new Instrument("piano"))
 				.exchange()
