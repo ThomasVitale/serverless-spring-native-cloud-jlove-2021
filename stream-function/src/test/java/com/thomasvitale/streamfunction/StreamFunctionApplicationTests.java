@@ -32,7 +32,7 @@ class StreamFunctionApplicationTests {
 	@Test
 	void testFunctionDefinitionApi() throws JsonProcessingException {
 		Instrument inputInstrument = new Instrument("piano");
-		Skill expectedOutputSkill = new Skill("I play the PIANO");
+		Skill expectedOutputSkill = new Skill("I can play the PIANO");
 		this.input.send(new GenericMessage<>(objectMapper.writeValueAsBytes(inputInstrument)));
 		assertThat(output.receive().getPayload()).isEqualTo(objectMapper.writeValueAsBytes(expectedOutputSkill));
 	}

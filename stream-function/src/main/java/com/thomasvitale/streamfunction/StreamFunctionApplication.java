@@ -31,7 +31,7 @@ public class StreamFunctionApplication {
 	Function<Flux<String>, Flux<Skill>> sentence() {
 		return flux -> flux.map(instrument -> {
 			log.info("Building sentence for skill...");
-			return new Skill("I play the " + instrument);
+			return new Skill("I can play the " + instrument);
 		});
 	}
 
