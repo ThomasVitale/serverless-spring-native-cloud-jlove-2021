@@ -32,7 +32,7 @@ jobs:
           cd web-function
           chmod +x gradlew
           ./gradlew clean build
-  build-function:
+  build-stream:
     name: Stream Function - Compile and test
     runs-on: ubuntu-20.04
     steps:
