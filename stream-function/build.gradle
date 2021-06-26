@@ -42,10 +42,6 @@ dependencyManagement {
 	}
 }
 
-bootBuildImage {
-	imageName = "thomasvitale/${project.name}:${project.version}"
-}
-
 test {
 	useJUnitPlatform()
 }

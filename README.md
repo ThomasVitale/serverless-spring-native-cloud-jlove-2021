@@ -1,6 +1,6 @@
 # Event-driven and serverless with Spring Cloud and Spring Native (jLove Conference 2021)
 
-Examples from the talk I have at jLove Conference 2021.
+Code samples from my presentation at jLove Conference 2021.
 
 ## Serverless application with Spring Native and Spring WebFlux
 
@@ -10,6 +10,12 @@ Build the `web-service` application as a native container image:
 
 ```bash
 ./gradlew bootBuildImage
+```
+
+Run the native image:
+
+```bash
+docker run --rm -p 8080:8080 web-service:0.0.1-SNAPSHOT
 ```
 
 Send a GET request:
@@ -26,6 +32,12 @@ Build the `web-function` application as a native container image:
 
 ```bash
 ./gradlew bootBuildImage
+```
+
+Run the native image:
+
+```bash
+docker run --rm -p 8080:8080 web-function:0.0.1-SNAPSHOT
 ```
 
 Send a POST request:
@@ -48,4 +60,10 @@ Build the `stream-function` application as a container image:
 
 ```bash
 ./gradlew bootBuildImage
+```
+
+Run the JVM image:
+
+```bash
+docker run --rm -p 8080:8080 stream-function:0.0.1-SNAPSHOT
 ```
